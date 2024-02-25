@@ -19,3 +19,12 @@ const fastify = require('fastify')({
     }
   }
   start()
+
+// Require external modules
+  const mongoose = require('mongoose')
+  
+// Connect to DB Universidad
+  mongoose.connect('mongodb://localhost/Universidad')
+   .then(() => console.log('MongoDB connected…'))
+   .catch(err => console.log(err))
+  
