@@ -2,12 +2,12 @@
 const boom = require('boom')
 
 // Get Data Models
-const Materias = require('../models/Materias')
+const materias = require('../models/Materias')
 
 // Get all Materias
 exports.getMaterias = async (req, reply) => {
   try {
-    const materias = await Materias.find()
+    const materias = await materias.find()
     return materias
   } catch (err) {
     throw boom.boomify(err)
@@ -18,7 +18,7 @@ exports.getMaterias = async (req, reply) => {
 exports.getSingleMateria = async (req, reply) => {
   try {
     const codigoMateria = req.params.id
-    const materia = await Materias.findById(codigoMateria)
+    const materia = await materias.findById(codigoMateria)
     return materia
   } catch (err) {
     throw boom.boomify(err)
@@ -28,7 +28,7 @@ exports.getSingleMateria = async (req, reply) => {
 // Add a new Materia
 exports.addMateria = async (req, reply) => {
   try {
-    const materia = new Materias(req.body)
+    const materia = new materias(req.body)
     return materia.save()
   } catch (err) {
     throw boom.boomify(err)
@@ -41,7 +41,7 @@ exports.updateMateria = async (req, reply) => {
     const codigoMateria = req.params.id
     const materia = req.body
     const { ...updateData } = materia
-    const update = await Materias.findByIdAndUpdate(codigoMateria, updateData, { new: true })
+    const update = await materias.findByIdAndUpdate(codigoMateria, updateData, { new: true })
     return update
   } catch (err) {
     throw boom.boomify(err)
@@ -52,7 +52,7 @@ exports.updateMateria = async (req, reply) => {
 exports.deleteMateria = async (req, reply) => {
   try {
     const codigoMateria = req.params.id
-    const materia = await Materias.findByIdAndRemove(codigoMateria)
+    const materia = await materias.findByIdAndRemove(codigoMateria)
     return materia
   } catch (err) {
     throw boom.boomify(err)

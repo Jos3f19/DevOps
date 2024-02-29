@@ -13,14 +13,13 @@ const routes = [
     url: '/api/estudiantes/:ID',
     handler: estudiantesController.getSingleStudent
   },
-  /*
+  
   {
     method: 'POST',
     url: '/api/estudiantes',
-    handler: estudiantesController.addStudent,
-    schema: documentation.addestudiantesSchema
+    handler: estudiantesController.addStudent
   },
-  */
+  
   {
     method: 'PUT',
     url: '/api/estudiantes/:ID',
@@ -42,14 +41,13 @@ const routes = [
     url: '/api/materias/:codigoMateria',
     handler: materiasController.getSingleMateria
   },
-  /*
+
   {
     method: 'POST',
     url: '/api/materias',
     handler: materiasController.addMateria,
-    schema: documentation.materiasSchema
   },
-  */
+
   {
     method: 'PUT',
     url: '/api/materias/:codigoMateria',

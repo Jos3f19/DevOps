@@ -2,12 +2,12 @@
 const boom = require('boom')
 
 // Get Data Models
-const Students = require('../models/Estudiantes')
+const students = require('../models/Estudiantes')
 
 // Get all Students
 exports.getStudents = async (req, reply) => {
   try {
-    const students = await Students.find()
+    const students = await students.find()
     return students
   } catch (err) {
     throw boom.boomify(err)
@@ -18,7 +18,7 @@ exports.getStudents = async (req, reply) => {
 exports.getSingleStudent = async (req, reply) => {
   try {
     const id = req.params.id
-    const student = await Students.findById(id)
+    const student = await students.findById(id)
     return student
   } catch (err) {
     throw boom.boomify(err)
@@ -28,7 +28,7 @@ exports.getSingleStudent = async (req, reply) => {
 // Add a new student
 exports.addStudent = async (req, reply) => {
   try {
-    const student = new Students(req.body)
+    const student = new students(req.body)
     return student.save()
   } catch (err) {
     throw boom.boomify(err)
@@ -41,7 +41,7 @@ exports.updateStudent = async (req, reply) => {
     const id = req.params.id
     const student = req.body
     const { ...updateData } = student
-    const update = await Students.findByIdAndUpdate(id, updateData, { new: true })
+    const update = await students.findByIdAndUpdate(id, updateData, { new: true })
     return update
   } catch (err) {
     throw boom.boomify(err)
@@ -52,7 +52,7 @@ exports.updateStudent = async (req, reply) => {
 exports.deleteStudent = async (req, reply) => {
   try {
     const id = req.params.id
-    const student = await Students.findByIdAndRemove(id)
+    const student = await students.findByIdAndRemove(id)
     return student
   } catch (err) {
     throw boom.boomify(err)
