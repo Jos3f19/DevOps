@@ -10,24 +10,23 @@ const routes = [
   },
   {
     method: 'GET',
-    url: '/api/estudiantes/:ID',
+    url: '/api/estudiantes/:id',
     handler: estudiantesController.getSingleStudent
   },
-  
   {
     method: 'POST',
     url: '/api/estudiantes',
-    handler: estudiantesController.addStudent
+    handler: estudiantesController.addStudent,
+    schema: estudiantesController.addestudiantesSchema
   },
-  
   {
     method: 'PUT',
-    url: '/api/estudiantes/:ID',
+    url: '/api/estudiantes/:id',
     handler: estudiantesController.updateStudent
   },
   {
     method: 'DELETE',
-    url: '/api/estudiantes/:ID',
+    url: '/api/estudiantes/:id',
     handler: estudiantesController.deleteStudent
   },
 //              Materias
@@ -38,26 +37,24 @@ const routes = [
   },
   {
     method: 'GET',
-    url: '/api/materias/:codigoMateria',
+    url: '/api/materias/:id',
     handler: materiasController.getSingleMateria
   },
-
   {
     method: 'POST',
     url: '/api/materias',
     handler: materiasController.addMateria,
+    schema: materiasController.materiasSchema
   },
-
   {
     method: 'PUT',
-    url: '/api/materias/:codigoMateria',
+    url: '/api/materias/:id',
     handler: materiasController.updateMateria
   },
   {
     method: 'DELETE',
-    url: '/api/materias/:codigoMateria',
+    url: '/api/materias/:id',
     handler: materiasController.deleteMateria
   }
 ]
-
 module.exports = routes
