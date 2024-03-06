@@ -35,5 +35,5 @@ jobs:
       uses: 5monkeys/cobertura-action@master
       with:
         path: coverage-final.json
-        repo_token: ${{ DevOpsIS.TOKEN_DEVOPS }}
+        repo_token: ${{ secrets.TOKEN_DEVOPS }}
         minimum_coverage: 40  
