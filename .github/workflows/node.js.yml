@@ -34,6 +34,6 @@ jobs:
     - name: Verificar cobertura
       uses: 5monkeys/cobertura-action@master
       with:
-        path: ../coverage/coverage-final.json
+        path: coverage/coverage-final.json
         repo_token: ${{ secrets.TOKEN_DEVOPS }}
         minimum_coverage: 40  
