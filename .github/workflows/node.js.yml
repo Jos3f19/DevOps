@@ -29,3 +29,11 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+
+    # Agrega la verificación de cobertura
+    - name: Verificar cobertura
+      uses: 5monkeys/cobertura-action@master
+      with:
+        path: coverage-final.json
+        repo_token: ${{ DevOpsIS.TOKEN_DEVOPS }}
+        minimum_coverage: 40  
