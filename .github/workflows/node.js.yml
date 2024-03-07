@@ -38,3 +38,7 @@ jobs:
         path: coverage-final.json
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         minimum_coverage: 40  
+    # Crea una imagen de Docker
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      
