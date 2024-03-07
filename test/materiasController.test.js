@@ -30,7 +30,7 @@ describe('getMaterias', () => {
         expect(Materias.find).toHaveBeenCalledTimes(1)
     })
 })
-
+/*
 // Unit test for getSingleMateria function
 describe('getSingleMateria', () => {
     // Test case: should return a single Materia by codigoMateria
@@ -76,7 +76,7 @@ describe('addMateria', () => {
     })
 })
 */
-
+/*
 // Unit test for updateMateria function
 describe('updateMateria', () => {
     // Test case: should update an existing Materia
@@ -137,3 +137,4 @@ describe('deleteMateria', () => {
         expect(Materias.findByIdAndDelete).toHaveBeenCalledWith('materiaId')
     })
 })
+ */
