@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">78.12% </span>
+                <span class="strong">31.25% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>25/32</span>
+                <span class='fraction'>10/32</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">20% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/5</span>
+                <span class='fraction'>1/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">78.12% </span>
+                <span class="strong">31.25% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>25/32</span>
+                <span class='fraction'>10/32</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -140,17 +140,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -161,12 +151,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -174,12 +161,25 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// External Dependancies
 const boom = require('boom')
@@ -198,11 +198,11 @@ exports.getMaterias = async (req, reply) =&gt; {
 }
 &nbsp;
 // Get single Materias by codigoMateria
-exports.getSingleMateria = async (req, reply) =&gt; {
-  try {
-    const id = req.params.id
-    const materia = await Materias.findById(id)
-    return materia
+exports.getSingleMateria = <span class="fstat-no" title="function not covered" >as</span>ync (req, reply) =&gt; {
+<span class="cstat-no" title="statement not covered" >  try {</span>
+    const id = <span class="cstat-no" title="statement not covered" >req.params.id</span>
+    const materia = <span class="cstat-no" title="statement not covered" >await Materias.findById(id)</span>
+<span class="cstat-no" title="statement not covered" >    return materia</span>
   } catch (err) {
 <span class="cstat-no" title="statement not covered" >    throw boom.boomify(err)</span>
   }
@@ -219,26 +219,26 @@ exports.addMateria = <span class="fstat-no" title="function not covered" >as</sp
 }
 &nbsp;
 // Update an existing Materia
-exports.updateMateria = async (req, reply) =&gt; {
-  try {
-    const id = req.params.id
-    const materia = req.body
-    const { ...updateData } = materia
-    const update = await Materias.findByIdAndUpdate(id, updateData, { new: true })
-    return update
+exports.updateMateria = <span class="fstat-no" title="function not covered" >as</span>ync (req, reply) =&gt; {
+<span class="cstat-no" title="statement not covered" >  try {</span>
+    const id = <span class="cstat-no" title="statement not covered" >req.params.id</span>
+    const materia = <span class="cstat-no" title="statement not covered" >req.body</span>
+    const { ...updateData } = <span class="cstat-no" title="statement not covered" >materia</span>
+    const update = <span class="cstat-no" title="statement not covered" >await Materias.findByIdAndUpdate(id, updateData, { new: true })</span>
+<span class="cstat-no" title="statement not covered" >    return update</span>
   } catch (err) {
 <span class="cstat-no" title="statement not covered" >    throw boom.boomify(err)</span>
   }
 }
 &nbsp;
 // Delete a Materia
-exports.deleteMateria = async (req, reply) =&gt; {
-  try {
-    const codigoMateria = req.params.id
-    const materia = await Materias.findByIdAndDelete(codigoMateria)
-    return materia
+exports.deleteMateria = <span class="fstat-no" title="function not covered" >as</span>ync (req, reply) =&gt; {
+<span class="cstat-no" title="statement not covered" >  try {</span>
+    const codigoMateria = <span class="cstat-no" title="statement not covered" >req.params.id</span>
+    const materia = <span class="cstat-no" title="statement not covered" >await Materias.findByIdAndDelete(codigoMateria)</span>
+<span class="cstat-no" title="statement not covered" >    return materia</span>
   } catch (err) {
-    throw boom.boomify(err)
+<span class="cstat-no" title="statement not covered" >    throw boom.boomify(err)</span>
   }
 }</pre></td></tr></table></pre>
 
@@ -247,7 +247,7 @@ exports.deleteMateria = async (req, reply) =&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-03-06T19:39:09.869Z
+                at 2024-03-07T23:57:35.491Z
             </div>
         <script src="../prettify.js"></script>
         <script>

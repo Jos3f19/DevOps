@@ -8,5 +8,4 @@ const materiasSchema = new mongoose.Schema({
     of: String
   }
 })
-
 module.exports = mongoose.model('Materias', materiasSchema)
