@@ -5,11 +5,17 @@ const fastify = require('fastify')({
 
 // Require external modules
 const mongoose = require('mongoose')
+const uri = "mongodb+srv://josefbehere:mbhgOTeQtxyINi3G@devops.0ob5zjr.mongodb.net/?retryWrites=true&w=majority&appName=DevOps";
 
-// Connect to DB Universidad
-mongoose.connect('mongodb://localhost/Universidad')
-  .then(() => console.log('MongoDB connected…'))
-  .catch(err => console.log(err))
+const connectToDB = async () => {
+  try {
+    await mongoose.connect(uri, { autoIndex: true });
+    console.log('Connected to MongoDB Atlas');
+  } catch (error) {
+    console.error(error);
+  }
+};
+connectToDB()
 
 // Routes declaration
 const routes = require('./routes')
