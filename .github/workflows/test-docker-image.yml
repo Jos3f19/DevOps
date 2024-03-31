@@ -1,8 +1,8 @@
-name: Docker Image CI for test branch
+name: Docker Image CI for main branch
 
 on:
   push:
-    branches: [ "test" ]
+    branches: [ "main" ]
     paths:
       - 'src/**'
 
