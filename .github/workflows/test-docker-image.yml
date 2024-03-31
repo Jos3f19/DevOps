@@ -1,10 +1,9 @@
 name: Docker Image CI for main branch
 
 on:
+  workflow_dispatch:
   push:
     branches: [ "main" ]
-    paths:
-      - 'src/**'
 
 jobs:
   deploy:
@@ -20,7 +19,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build the Docker image
         run: |
-          docker build --platform linux --tag jos3f19/dev_ops:latest -f src/Dockerfile .
+          docker build --platform linux --tag jos3f19/dev_ops:latest -f Dockerfile .
       - name: Publish Docker Image
         run: |
           docker push jos3f19/dev_ops:latest
