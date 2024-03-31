@@ -23,4 +23,9 @@ jobs:
       - name: Publish Docker Image
         run: |
           docker push jos3f19/dev_ops:latest
-          
+      - name: App service auth
+        uses: azure/webapps-deploy@v2 
+        with:
+          app-name: 'DevOpsUdeM'
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          images: 'jos3f19/dev_ops:latest'
