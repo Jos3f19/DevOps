@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/feb3e851-70b1-47c8-9215-860cfd635b4d/resourceGroups/UdeMedellinJosef_group/providers/Microsoft.Web/sites/UdeMedellinJosef",
+    "appService.deploySubpath": "."
+}
