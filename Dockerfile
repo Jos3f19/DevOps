@@ -16,8 +16,9 @@ COPY . .
 # Expose the port the app runs on
 EXPOSE 3000
 
-RUN chmod +x /usr/src/app/node_modules/.bin/nodemon
-
 # Command to run the application
 CMD ["npm", "start"]
+
+RUN chmod +x /usr/src/app/node_modules/.bin/nodemon
+
 
