@@ -9,6 +9,7 @@ COPY package*.json ./
 
 # Install dependencies
 RUN npm install
+RUN npm install -g nodemon
 
 # Copy the rest of the application
 COPY . .
@@ -18,7 +19,4 @@ EXPOSE 3000
 
 # Command to run the application
 CMD ["npm", "start"]
-
-RUN chmod +x /usr/src/app/node_modules/.bin/nodemon
-
 
