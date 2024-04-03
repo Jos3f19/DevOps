@@ -26,7 +26,11 @@ routes.forEach((route, index) => {
 
 // Declare a route
 fastify.get('/', async (request, reply) => {
+<<<<<<< Updated upstream
   return { hello: 'world' }
+=======
+  return { hello: 'Josef B' }
+>>>>>>> Stashed changes
 })
 
 // Run the server
