@@ -4,6 +4,8 @@ FROM node:20
 # Set the working directory in the container
 RUN mkdir -p /usr/src/app
 
+ENV HOST 0.0.0.0
+
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
