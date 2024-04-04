@@ -1,5 +1,5 @@
 # .github/workflows/deploy-gcloud.yml
-name: Deploy API
+name: Deploy API to Google Cloud
 on:
   push:
     branches:
@@ -13,7 +13,7 @@ jobs:
   deploy:
     name: Deploy DevOpsAPI
     runs-on: ubuntu-latest
-    if: "contains(github.event.head_commit.message, 'to main')"
+    #if: "contains(github.event.head_commit.message, 'to main')"
     steps:
       - uses: actions/checkout@v4
       - id: 'auth'
