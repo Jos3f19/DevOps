@@ -59,6 +59,9 @@ const routes = [
   {
     method: 'GET',
     url: '/api/healthcheck',
+    handler: (req, res) => {
+      res.send('Melo Caramelo');
+    }
   }
 ]
 module.exports = routes
