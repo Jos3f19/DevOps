@@ -23,4 +23,3 @@ jobs:
       - name: Publish Docker Image
         run: |
           docker push jos3f19/dev_ops:latest
-          
