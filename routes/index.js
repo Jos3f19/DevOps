@@ -55,6 +55,10 @@ const routes = [
     method: 'DELETE',
     url: '/api/materias/:id',
     handler: materiasController.deleteMateria
+  },
+  {
+    method: 'GET',
+    url: '/api/healthcheck',
   }
 ]
 module.exports = routes
