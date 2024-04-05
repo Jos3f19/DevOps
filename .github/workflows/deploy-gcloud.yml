@@ -5,13 +5,13 @@ on:
     branches:
       - main
 env:
-  #PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
-  PROJECT_ID: ${{ secrets.GCP_PROJECT_ID2 }}
-  #APP_ID: devopsudem
-  APP_ID: autosudem
+  PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+  #PROJECT_ID: ${{ secrets.GCP_PROJECT_ID2 }}
+  APP_ID: devopsudem
+  #APP_ID: autosudem
   RUN_REGION: us-east1
-  #SA_KEY_JSON: ${{ secrets.GCP_SA_KEY_JSON }}
-  SA_KEY_JSON: ${{ secrets.GCP_SA_KEY_JSON2 }}
+  SA_KEY_JSON: ${{ secrets.GCP_SA_KEY_JSON }}
+  #SA_KEY_JSON: ${{ secrets.GCP_SA_KEY_JSON2 }}
 jobs:
   deploy:
     name: Deploy DevOpsAPI
@@ -21,8 +21,8 @@ jobs:
       - id: 'auth'
         uses: 'google-github-actions/auth@v2'
         with: 
-          #credentials_json: ${{ secrets.GCP_SA_KEY_JSON }}
-          credentials_json: ${{ secrets.GCP_SA_KEY_JSON2 }}
+          credentials_json: ${{ secrets.GCP_SA_KEY_JSON }}
+          #credentials_json: ${{ secrets.GCP_SA_KEY_JSON2 }}
   
       # Setup gcloud CLI
       - uses: google-github-actions/setup-gcloud@v2
