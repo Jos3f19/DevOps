@@ -1,5 +1,5 @@
 # .github/workflows/deploy-gcloud.yml
-name: Deploy API to Google Cloud
+name: Deploy API to GCP
 on:
   push:
     branches:
