@@ -1,6 +1,6 @@
 FROM python:3.12
-WORKDIR /flaskMateriasEstudiantes
-COPY . /flaskMateriasEstudiantes
+WORKDIR /
+COPY . /
 COPY requeriments.txt .
 COPY .env .
 COPY . /models
