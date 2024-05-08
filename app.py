@@ -15,7 +15,7 @@ def page_not_found(e):
 
 
 
-@app.route("/health", methods=["GET"])
+@app.route("/healthcheck", methods=["GET"])
 def health():
     return jsonify({"Status de la API Materias Estudiantes": "200 Corriendo",
                     "Status de la BD de Materias y Estudiantes": "Sirviendo al 200%"})
