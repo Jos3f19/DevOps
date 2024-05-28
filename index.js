@@ -5,7 +5,7 @@ const fastify = require('fastify')({
 
 // Require external modules
 const mongoose = require('mongoose')
-const uri = "mongodb+srv://josefbehere:mbhgOTeQtxyINi3G@devops.0ob5zjr.mongodb.net/?retryWrites=true&w=majority&appName=DevOps";
+const uri = "mongodb+srv://josefbehere:advanceQF3@devops.0ob5zjr.mongodb.net/?retryWrites=true&w=majority&appName=DevOps";
 
 const connectToDB = async () => {
   try {
