@@ -13,8 +13,8 @@ env:
   #PROJECT_ID: ${{ secrets.GCP_PROJECT_ID2 }}
   APP_ID: newdevops
   #APP_ID: autosudem
-  RUN_REGION: us-east1
-  SA_KEY_JSON: ${{ secrets.GCP_SA_KEY_JSON }}
+  #RUN_REGION: us-east1
+  #SA_KEY_JSON: ${{ secrets.GCP_SA_KEY_JSON }}
   #SA_KEY_JSON: ${{ secrets.GCP_SA_KEY_JSON2 }}
 jobs:
   deploy:
