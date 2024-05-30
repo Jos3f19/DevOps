@@ -1,9 +1,13 @@
 # .github/workflows/deploy-gcloud.yml
-name: Deploy API to Google Cloud
+name: Deploy API to Google Cloud with Terraform
 on:
   push:
     branches:
       - main
+permissions:
+  contents: read
+  issues: write
+  
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
   #PROJECT_ID: ${{ secrets.GCP_PROJECT_ID2 }}
@@ -29,10 +33,22 @@ jobs:
         with:
           version: ">= 363.0.0"
           
-
       # Build and push image to Google Container Registry
       - name: Build
         run: gcloud builds submit --tag gcr.io/$PROJECT_ID/$APP_ID:$GITHUB_SHA
 
-      - name: Deploy
-        run: gcloud run deploy $APP_ID --image gcr.io/$PROJECT_ID/$APP_ID:$GITHUB_SHA --platform managed --region $RUN_REGION --allow-unauthenticated
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+            terraform_version: 1.5.7
+
+      - name: Terraform init and validate
+        run: /
+          terraform init
+
+      - name: Terraform plan
+        run: /
+          terraform plan
+
+      #- name: Deploy
+      #  run: gcloud run deploy $APP_ID --image gcr.io/$PROJECT_ID/$APP_ID:$GITHUB_SHA --platform managed --region $RUN_REGION --allow-unauthenticated
