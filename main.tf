@@ -33,12 +33,12 @@ resource "google_cloud_run_service_iam_member" "run_all_users" {
 # Create the Cloud Run service
 resource "google_cloud_run_service" "run_service" {
   name = "newdevops"
-  location = "us-central1"
+  location = "us-east5"
 
   template {
     spec {
       containers {
-        image = "gcr.io/responsive-hall-419216/devopsudem@sha256:579a0b4f222db95d9340fc5a9deef1eccaf9c4cbcdfc93f11d1da48ed94ed993"
+        image = "gcr.io/responsive-hall-419216/newdevops@sha256:716e8cc9a81642dcc3536826a61743ef8e7d22ac105338b9bb693857f0f6ab69"
       }
     }
   }
