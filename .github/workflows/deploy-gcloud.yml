@@ -43,12 +43,11 @@ jobs:
             terraform_version: 1.5.7
 
       - name: Terraform init and validate
-        run: /
+        run: |
           terraform init
 
       - name: Terraform plan
-        run: /
+        run: |
           terraform plan
-
       #- name: Deploy
       #  run: gcloud run deploy $APP_ID --image gcr.io/$PROJECT_ID/$APP_ID:$GITHUB_SHA --platform managed --region $RUN_REGION --allow-unauthenticated
