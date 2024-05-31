@@ -1,5 +1,5 @@
 # .github/workflows/deploy-gcloud.yml
-name: Deploy API to Google Cloud with Terraform
+name: Deploy API to Google Cloud with Terraform.
 on:
   push:
     branches:
